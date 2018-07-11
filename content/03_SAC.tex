@@ -5,7 +5,23 @@ wichtig, ein Verständnis über den grundlegenden Aufbau und die Arbeitsweise so
 existierender Kunden zu erhalten. 
 
 \subsection{Produktbeschreibung}
-\todo[inline]{Produktbeschreibung}
+\ac{sac} ist eine Anwendung, die es ermöglicht Analysen, Planungen und Prognosen in einer einzigen Anwendung durchzuführen. 
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=7cm]{homehero.png}
+	\caption{SAP Analytics Cloud}
+	\label{img:homeHeroSAC}
+\end{figure}
+Die gesamte Applikation enthält sehr viele Funktionalitäten, die den Rahmen dieser Seminararbeit sprengen würden. Dennoch ist
+es sinnvoll sich zumindest einige FUnktionalitäten aus dem Produkt vorstellen zu können. 
+Grundsätzlich arbeitet \ac{cas} in drei Schritten. 
+
+\begin{enumerate}
+    \item Daten zur Verfügung stellen
+    \item Modellierung der Informationen
+    \item Auswertung und Verwendung der gewonnen Informationen 
+\end{enumerate}
+Der letzte Schritt ermöglicht das Analysieren der Informationen und das Planen. 
 
 \subsection{Aufbau der Abteilung}
 Die Abteilung die das Product \ac{sac} entwickelt, besteht aus weltweit verteilten Teams, 
@@ -41,8 +57,22 @@ Einverständnis geben. Dieses Konzept wird bei Scrum als \ac{dod} bezeichnet.
 
 \subsection{Team: Modeling}
 Das Modeling-Team ist für einen Bereich der Anwendung verantwortlich, der viele Schnittpunkte zu anderen Teams besitzt.
-\todo[inline]{Beschreibung der Funktionalität vom Modeling}
+Einige dieser Schnittstellen sind in \autoref{img:sac-modeling} dargestellt. Wrangling ist hauptsächlich für das 
+einbinden von Datenquellen verantwortlich. Sie sorgen dafür, dass ein Kunde aus verschiedenen Quellen Modelle erstellen kann oder Daten in 
+ein existierendes Modell laden kann. 
+Modelle stellen die Struktur der Daten da und konstruieren aus diesen Daten Informationen. Dies ist die Aufgabe des Modeling Teams.
+Im Modelingbreich lassen sich , neben vielen weiteren Funktionalitäten, verschiedene Dimensionen, Maßstäbe und Formeln definieren. 
+Zusammen mit den Daten werden diese schließlich in der Story angezeigt. 
+\todo[inline]{Screenshot Modelling bereich evtl. Account-Dimension}
 
-\todo[inline]{Beschreibung des Modelingteams}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=3cm]{modeling.png}
+	\caption{Teamstruktur: Modeling}
+	\label{img:sac-modeling}
+\end{figure}
+
 Das Modeling besteht neben einem Manager aus zwei Architekten, die den Manager mit der Entscheidung über 
-Entwicklungsaufgaben unterstützen und den gesamten Modeling-Bereich technisch überblicken. 
+Entwicklungsaufgaben unterstützen und den gesamten Modeling-Bereich technisch überblicken. Außerdem gibt es zwei Designer 
+die Vorschläge für das \ac{ui} erstellen und bei der \ac{ux} unterstützen. Zuletzt, aber nicht weniger wichtig, sind die zwei Qualitätsverantwortlichen. 
+Die den Entwickler beim Testen unterstützen und die Qualität des Produkts überprüfen. 
