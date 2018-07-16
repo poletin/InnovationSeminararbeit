@@ -1,7 +1,5 @@
 \section{Einführung neuer Features bei SAP Analytics Cloud}\label{sec:feature}
-Soll eine neue Funktionalität umgesetzt werden, wird diese an den Entwickler weitergegeben. Dieser 
-arbeitet in engem Kontakt mit Designern und Qualitätsverantwortlichen ein Testkonzept und ein Architekturkonzept heraus. 
-Anschließend wird die Idee nochmals bewertet und entweder weiterverfolgt oder abgebrochen. 
+
 
 \subsection{Quellen der Ideen}
 \begin{itemize}
@@ -10,7 +8,34 @@ Anschließend wird die Idee nochmals bewertet und entweder weiterverfolgt oder a
     \item Andere Teams 
     \item Board
 \end{itemize}
+
+Damit eine Idee den Status erreicht, dass die umgesetzt werden kann, müssen verschiedene Konzepte bereits durchdacht und abgestimmt werden. 
+\begin{enumerate}
+    \item Fromulieren des Features in einer \textit{User-Story}
+    \item Ausarbeitung von Architekturkonzept und Testkonzept
+    \item UI-Mock
+\end{enumerate}
+Auf der Grundlage dieser Dokumente entscheiden die Manager in einem \textit{Build-Meeting} anhand von Kriterien ob diese Idee beziehungsweise ob dieses Feature 
+umgesetzt wird. Es kann durchaus vorkommen, dass bereits beim Erstellen dieser Konzepte eine Idee abgelehnt wird. In den folgenden Abschnitten werden
+die einzelnen Dokumente und Bewertungsprozesse beschrieben.
+
 \subsection{Definition of Ready}
+Die \textit{Definition of Ready} gibt an, ob eine Idee zur Umsetzung freigegeben wird.
+
+
+Soll eine neue Funktionalität umgesetzt werden, wird diese an den Entwickler weitergegeben. Dieser 
+arbeitet in engem Kontakt mit Designern und Qualitätsverantwortlichen ein Testkonzept und ein Architekturkonzept heraus. 
+Anschließend wird die Idee nochmals bewertet und entweder weiterverfolgt oder abgebrochen. Das Architekturkonzept beschreibt den 
+grundlegenden Aufbau des Features. Hierbei wird besonders auf Anpassungen im Backend und der Datenbank wertgelegt. Denn sobald eine Strukturänderung 
+an einer Datenbanktabelle notwendig ist, muss berücksichtigt werden, wie eine Migration der Kunden funktioniert. Hierbei dürfen die Tests nicht 
+vernachlässigt werden. Sollte es bei einer Migration zu Problemen kommen, könnten Kundendaten beschädigt werden. Im Architekturkonzept wird 
+neben dem Backend auch das Frontend betrachtet. Dabei wird beschrieben, ob es zum Beispiel lediglich Anpassungen an einem bereits existierenden
+Dialog gibt oder ein vollständig neuer Dialog erzeugt werden muss. 
+Das Testkonzept enthält alle Tests die nach der Entwicklung vorgenommen werden. Dabei ist besonders die Kombination mit anderen Entwicklungen 
+wichtig. Für jedes Feature müssen automatisierte Integrationstest und Unittests vom Entwickler programmiert werden. Zusätzlich werden verschiedene
+manuelle Tests aufgelistet und gegebenenfalls Migrationstest.\\
+Erst wenn diese beiden Konzepte von Entwickler, Designer und Qualitätsverantwortlichen formuliert wurden und im Build-Meeting von den Managern abgesegnet 
+wurden, beginnt die Entwicklung des Features. 
 \begin{itemize}
     \item User-Story-Labels: Innovation, Customer, Improvement, Escalation
     \item Architecture APproved
@@ -23,6 +48,7 @@ Anschließend wird die Idee nochmals bewertet und entweder weiterverfolgt oder a
     \item Review vom Feature
 \end{itemize}
 \subsection{Umsetzungsentscheidungen}
+Auch während der Umsetzung arbeiten Designer, Qualitätsverantwortliche und Entwickler 
 \begin{itemize}
     \item Zusammenarbeit mit Designern
     \item Zusammenarbeit verschiedener Teams, Verantwortlichkeit
