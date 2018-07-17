@@ -1,14 +1,24 @@
-\section{Einführung neuer Features bei SAP Analytics Cloud}\label{sec:feature}
-
+%!TEX root = ../seminararbeit.tex
+\section{Einführung neuer Features bei \ac{sac}}\label{sec:feature}
 
 \subsection{Quellen der Ideen}
-\begin{itemize}
-    \item Roadmap
-    \item Kunden
-    \item Andere Teams 
-    \item Board
-\end{itemize}
+Die Ideen für die Funktionalitäten der Anwendung stammen aus unterschiedlichen Quellen. Die wichtigste Quelle ist hierbei der Kunde selbst. 
+Einige spezielle Kunden arbeiten eng mit Beratern von \ac{sac} zusammen. Diese Berater werden im Scrum-Umfeld als \textit{Product-Owner} bezeichnet. 
+Kundenanfragen werden über die Berater an die Manager der Teams weitergetragen. Neben dem direkten Feedback der Kunden gibt es ein 
+Fehler-Management-System, in dem Kunden Probleme anlegen können.\\
+Eine weitere Quelle ist der Abteilungsleiter und die Vorstände von SAP. Zu Beginn eines neuen Jahres wird von allen Managern von \ac{sac}
+eine \textit{Roadmap} zusammengestellt. Dies Roadmap ist allerdings nicht statisch, sie wird über das Jahr hinweg mehrmals angepasst. 
+Es gibt eine Gesamt-Roadmap in der Themen beschrieben werden, die die gesamte Abteilung betroffen. Ein aktuelles Thema ist beispielsweise
+die Performance der Anwendung. Für jedes Team gibt es eine weitere individualisierte Roadmap, im Modeling-Team ist ein aktuelles Thema beispielsweise 
+eine Neuentwicklung der Oberfläche.\\
+Es können auch interne Ideen für neue Funktionalitäten bereitgestellt werden, zum Beispiel von Mitarbeitern einzelner Teams.
+Diese werden direkt über die Manager kommuniziert.\\
+Für \ac{sac} gibt es ein Team, das basierend auf \ac{sac} eine \textit{Boardroom-Anwendung} entwickelt, die speziell für die Vorstände von SAP angepasst ist.
+Deshalb sind auch die Vorstandsmitglieder aktive Nutzer des Produkts und stellen Anfragen für Funktionalität.\\
+Die Ideen aus verschiedenen Quellen werden in einem Ideenprozess verarbeitet. Dabei wird entschiedene, ob die Ideen umgesetzt werden oder nicht. Dieser Prozess
+wird im folgenden Abschnitt vorgestellt.
 
+\subsection{Ideenvorverarbeitung}
 Damit eine Idee den Status erreicht, dass die umgesetzt werden kann, müssen verschiedene Konzepte bereits durchdacht und abgestimmt werden. 
 \begin{enumerate}
     \item Fromulieren des Features in einer \textit{User-Story}
@@ -19,39 +29,36 @@ Auf der Grundlage dieser Dokumente entscheiden die Manager in einem \textit{Buil
 umgesetzt wird. Es kann durchaus vorkommen, dass bereits beim Erstellen dieser Konzepte eine Idee abgelehnt wird. In den folgenden Abschnitten werden
 die einzelnen Dokumente und Bewertungsprozesse beschrieben.
 
-\subsection{Definition of Ready}
-Die \textit{Definition of Ready} gibt an, ob eine Idee zur Umsetzung freigegeben wird.
-
-
-Soll eine neue Funktionalität umgesetzt werden, wird diese an den Entwickler weitergegeben. Dieser 
+Die \textit{Definition of Ready} gibt an, ob eine Idee zur Bewertung freigegeben wird.
+Soll eine neue Idee umgesetzt werden, wird diese an den Entwickler weitergegeben. Dieser 
 arbeitet in engem Kontakt mit Designern und Qualitätsverantwortlichen ein Testkonzept und ein Architekturkonzept heraus. 
-Anschließend wird die Idee nochmals bewertet und entweder weiterverfolgt oder abgebrochen. Das Architekturkonzept beschreibt den 
-grundlegenden Aufbau des Features. Hierbei wird besonders auf Anpassungen im Backend und der Datenbank wertgelegt. Denn sobald eine Strukturänderung 
-an einer Datenbanktabelle notwendig ist, muss berücksichtigt werden, wie eine Migration der Kunden funktioniert. Hierbei dürfen die Tests nicht 
-vernachlässigt werden. Sollte es bei einer Migration zu Problemen kommen, könnten Kundendaten beschädigt werden. Im Architekturkonzept wird 
-neben dem Backend auch das Frontend betrachtet. Dabei wird beschrieben, ob es zum Beispiel lediglich Anpassungen an einem bereits existierenden
-Dialog gibt oder ein vollständig neuer Dialog erzeugt werden muss. 
-Das Testkonzept enthält alle Tests die nach der Entwicklung vorgenommen werden. Dabei ist besonders die Kombination mit anderen Entwicklungen 
+Das Architekturkonzept beschreibt den grundlegenden Aufbau des Features. 
+Das Testkonzept enthält alle Tests die nach der Entwicklung vorgenommen werden. Dabei ist besonders die Kombination mit anderen Funktionalität 
 wichtig. Für jedes Feature müssen automatisierte Integrationstest und Unittests vom Entwickler programmiert werden. Zusätzlich werden verschiedene
 manuelle Tests aufgelistet und gegebenenfalls Migrationstest.\\
-Erst wenn diese beiden Konzepte von Entwickler, Designer und Qualitätsverantwortlichen formuliert wurden und im Build-Meeting von den Managern abgesegnet 
-wurden, beginnt die Entwicklung des Features. 
-\begin{itemize}
-    \item User-Story-Labels: Innovation, Customer, Improvement, Escalation
-    \item Architecture APproved
-    \item Test strategie ready 
-    \item deployment impact 
-\end{itemize}
+Erst wenn diese beiden Konzepte von Entwickler, Designer und Qualitätsverantwortlichen formuliert wurden, wird diese im 
+\textit{Build-Meeting} von den Managern bewertet und abgesegnet. 
+
 \subsection{Ideenbewertung: Build-Meeting}
+Das Build-Meeting ist ein Treffen aller Teammanager. Jeder Manager hat die Möglichkeit Ideen und Konzepte für zukünftige Entwicklungen 
+vorzustellen. 
+\quote{Anhand von klar formulierten Kriterien werden die Ideen bewertet. So wird darüber entschieden welche Ideen umgesetzt werden oder nicht.}
+Leider zeigt sich in der Praxis, dass die Wirklichkeit, besonders bei der Weiterentwicklung großer Produkte, eine andere ist. 
+In den Build-Meetings werden die beiden Konzepte betrachtet. Sind diese schlüssig wird eine Idee zur Umsetzung frei gegeben. 
+Das Problem in der Praxis ist, dass hinter den Ideen oft Kunden stehen, die eine weitere Funktionalität fordern. Es obligt nicht 
+dem Entwicklunsteam Ideen nach Fragen wie: 
 \begin{itemize}
-    \item Manager sitzen zusammen 
-    \item Review vom Feature
+    \item Passt die Umsetzung dieser Idee in das Gesamtprodukt?
+    \item Bringt es allen Kunden einen Mehrwert oder ist es eine spezifische Lösung für einen einzelnen Kunden?
+    \item Hebt sich der Aufwand für die Umsetzung durch den Mehrwert für den Kunden auf?
 \end{itemize}
-\subsection{Umsetzungsentscheidungen}
-Auch während der Umsetzung arbeiten Designer, Qualitätsverantwortliche und Entwickler 
+zur beurteilen. Es sind eher Fragen wie: 
 \begin{itemize}
-    \item Zusammenarbeit mit Designern
-    \item Zusammenarbeit verschiedener Teams, Verantwortlichkeit
-    \item QUalitätsanspruch: Testing! 
-    \item \ac{arc} - Definition of Done
+    \item Wie kann die Idee in das Produkt integriert werden?
+    \item Wie viel Zeit muss für die Umsetzung geplant werden? 
+    \item Welche Teams sind an der Umsetzung dieser Idee beteiligt?
 \end{itemize}
+die beantwortet werden müssen. 
+Dies zeigt, dass der theoretische Prozess, Kriterien formulieren und anwenden, in der Praxis nicht immer eingehalten werden kann.
+Die Bewertung der Ideen ist im Entwicklungsprozess bei \ac{sac} implizit in den einzelnen Vorverarbeitungsschritten einer Idee vorhanden.
+Sobald ein sinvolles Konzept für eine Idee erstellt werden konnte, kann diese eingeplant und implementiert werden.
