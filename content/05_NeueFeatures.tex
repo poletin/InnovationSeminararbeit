@@ -1,15 +1,15 @@
 %!TEX root = ../seminararbeit.tex
-\section{Einführung neuer Features bei \ac{sac}}\label{sec:feature}
+\section{Einführung neuer Funktionen bei \ac{sac}}\label{sec:feature}
 
 \subsection{Quellen der Ideen}
 Die Ideen für die Funktionalitäten der Anwendung stammen aus unterschiedlichen Quellen. Die wichtigste Quelle ist hierbei der Kunde selbst. 
 Einige spezielle Kunden arbeiten eng mit Beratern von \ac{sac} zusammen. Diese Berater werden im Scrum-Umfeld als \textit{Product-Owner} bezeichnet. 
-Kundenanfragen werden über die Berater an die Manager der Teams weitergetragen. Neben dem direkten Feedback der Kunden gibt es ein 
-Fehler-Management-System, in dem Kunden Probleme anlegen können.\\
+Kundenanfragen werden über die Berater an die Manager der Teams herangetragen. Neben dem direkten Feedback der Kunden gibt es ein 
+Fehler-Management-System, in dem Kunden Probleme melden können.\\
 Eine weitere Quelle ist der Abteilungsleiter und die Vorstände von SAP. Zu Beginn eines neuen Jahres wird von allen Managern von \ac{sac}
-eine \textit{Roadmap} zusammengestellt. Dies Roadmap ist allerdings nicht statisch, sie wird über das Jahr hinweg mehrmals angepasst. 
-Es gibt eine Gesamt-Roadmap in der Themen beschrieben werden, die die gesamte Abteilung betreffen. Ein aktuelles Thema ist beispielsweise
-die Performance der Anwendung. Für jedes Team gibt es eine weitere individualisierte Roadmap, im Modeling-Team ist ein aktuelles Thema beispielsweise 
+eine \textit{Roadmap} zusammengestellt. Diese Roadmap ist allerdings nicht statisch, sondern wird über das Jahr hinweg mehrmals angepasst. 
+Es gibt eine Gesamt-Roadmap in der Themen beschrieben werden, die das gesamte Produkt betreffen. Ein aktuelles Thema ist beispielsweise
+die Performance der Anwendung. Für jedes Team gibt es eine weitere individualisierte Roadmap. Im Modeling-Team ist ein aktuelles Thema beispielsweise 
 eine Neuentwicklung der Oberfläche.\\
 Es können auch interne Ideen für neue Funktionalitäten bereitgestellt werden, zum Beispiel von Mitarbeitern einzelner Teams.
 Diese werden direkt über die Manager kommuniziert.\\
@@ -17,9 +17,10 @@ Die Ideen aus verschiedenen Quellen werden in einem Ideenprozess verarbeitet. Da
 wird im folgenden Abschnitt vorgestellt.
 
 \subsection{Ideenvorverarbeitung}
-Damit eine Idee den Status erreicht, dass die umgesetzt werden kann, müssen verschiedene Konzepte bereits durchdacht und abgestimmt werden. 
+Damit eine Idee umgesetzt werden kann, müssen verschiedene Konzepte bereits durchdacht und abgestimmt werden. 
 \begin{enumerate}
-    \item Formulieren des Features in einer \textit{User-Story}
+    \item Formulieren des Features in einer \textit{User-Story}. Eine User-Story ist ein Konzept von Scrum, um 
+    eine Funktionalität zu beschreiben.
     \item Ausarbeitung von Architekturkonzept und Testkonzept
     \item UI-Mockup
 \end{enumerate}
@@ -32,66 +33,62 @@ Soll eine neue Idee umgesetzt werden, wird diese an den Entwickler weitergegeben
 arbeitet in engem Kontakt mit Designern und Qualitätsverantwortlichen ein Testkonzept und ein Architekturkonzept heraus. 
 Das Architekturkonzept beschreibt den grundlegenden Aufbau des Features. 
 Das Testkonzept enthält alle Tests, die nach der Entwicklung erfolgreich durchgeführt werden müssen. Dabei ist besonders die Kombination mit anderen Funktionalitäten 
-wichtig. Für jedes Feature müssen automatisierte Integrationstest und Unit-Tests vom Entwickler programmiert werden. Zusätzlich werden verschiedene
-manuelle Tests aufgelistet.\\
-Erst wenn diese beiden Konzepte von Entwickler, Designer und Qualitätsverantwortlichen formuliert wurden, wird diese im 
+wichtig. \\
+Erst wenn Architektur- und Testkonzepte von Entwickler, Designer und Qualitätsverantwortlichen formuliert wurden, wird eine neue Funktionalität im 
 \textit{Build-Meeting} von den Managern bewertet und abgesegnet. Diese Vorverarbeitung der Ideen sichert die Machbarkeit bei der Umsetzung. Zusätzlich ergibt 
 sich eine Aufwandsabschätzung darüber, wie viel Aufwand für die Entwicklung einzuplanen ist. 
 
 \subsection{Ideenbewertung: Build-Meeting}
 Das Build-Meeting ist ein Treffen aller Teammanager. Jeder Manager hat die Möglichkeit Ideen und Konzepte für zukünftige Entwicklungen 
-vorzustellen. 
-
-\begin{quote}"Anhand von klar formulierten Kriterien werden die Ideen bewertet. So wird darüber entschieden welche Ideen umgesetzt werden oder nicht."(\autoref{sec:theorie})\end{quote}
-
+vorzustellen. In \autoref{sec:theorie} wurde beschrieben, dass Ideen anhand von klar formulierten 
+Kriterien bewertet werden sollten. 
 Leider zeigt sich in der Praxis, dass die Wirklichkeit, besonders bei der Weiterentwicklung großer Produkte, eine andere ist. 
-In den Build-Meetings werden die Konzepte für die Architektur und das Testen betrachtet. Sind diese schlüssig, wird eine Idee zur Umsetzung frei gegeben. 
-Das Problem in der Praxis ist, dass hinter den Ideen oft Kunden stehen, die eine weitere Funktionalität fordern. Es obliegt nicht 
-dem Entwicklungsteam Ideen nach Fragen wie: 
+In den Build-Meetings werden die Konzepte für die Architektur und das Testen betrachtet. Sind diese schlüssig, wird eine Idee zur Umsetzung freigegeben. 
+Ein Problem in der Praxis ist, dass hinter den Ideen oft Kunden stehen, die eine weitere Funktionalität fordern. Es obliegt nicht 
+dem Entwicklungsteam Ideen nach Fragen wie diesen zu beurteilen: 
 \begin{itemize}
     \item Passt die Umsetzung dieser Idee in das Gesamtprodukt?
     \item Bringt es allen Kunden einen Mehrwert oder ist es eine spezifische Lösung für einen einzelnen Kunden?
     \item Hebt sich der Aufwand für die Umsetzung durch den Mehrwert für den Kunden auf?
 \end{itemize}
-zur beurteilen. Es sind eher Fragen wie: 
+Es sind eher Fragen wie diesen die beurteilt werden müssen: 
 \begin{itemize}
     \item Wie kann die Idee in das Produkt integriert werden?
     \item Wie viel Zeit muss für die Umsetzung geplant werden? 
     \item Welche Teams sind an der Umsetzung dieser Idee beteiligt?
 \end{itemize}
-die beantwortet werden müssen. 
-Dies zeigt, dass der theoretische Prozess, Kriterien formulieren und anwenden, in der Praxis nicht immer eingehalten werden kann.
-Die Bewertung der Ideen ist im Entwicklungsprozess bei \ac{sac} implizit in den einzelnen Vorverarbeitungsschritten einer Idee vorhanden.
-Sobald ein sinnvolles Konzept für eine Idee erstellt werden konnte, kann diese eingeplant und implementiert werden.
+Dies zeigt, dass der theoretische Prozess, Kriterien formulieren und anwenden, in der Praxis aber nicht immer eingehalten werden kann.
+Die Bewertung von Ideen ist im Entwicklungsprozess bei \ac{sac} implizit und in den einzelnen Vorverarbeitungsschritten einer Idee vorhanden.
 \subsection{Theoretische Definition der Kriterien}\label{sec:feature-kriterien}
-In diesem Abschnitt wird versucht, die Kriterien, die implizit in der Vorverarbeitung durch die Konzepte enthalten sind zu formulieren. 
-Diese Formulierung ist lediglich ein Vorschlag, da auf Grund der Komplexität der Abteilung nicht ohne die Beteiligung aller Teammanager und Verantwortungsträger
-eine Formulierung gefunden werden kann. Der Vorschlag sollte zusätzlich mit den Beratern, die engen Kontakt mit Kunden haben, evaluiert werden. 
-Mögliche Randbedingungen für die Einführung neuer Funktionalitäten könnten sein: 
-\begin{itemize}
+In diesem Abschnitt werden die Kriterien, die implizit und in der Vorverarbeitung durch die Konzepte enthalten sind formuliert. 
+Diese Fassung ist ein Vorschlag. Für eine Formulierung die in der Praxis angewendet wird, ist die Beteiligung aller Teammanager und Verantwortungsträger
+für die Formulierung notwendig. Dies hat den Grund, dass die Strukturen des Produkts und der Abteilung sehr komplex sind. 
+Ein Vorschlag sollte zusätzlich mit den Beratern, die engen Kontakt mit Kunden haben, evaluiert werden. 
+
+\paragraph{Mögliche Randbedingungen:} 
+\begin{enumerate}
     \item Die Idee muss umsetzbar sein. Dies wird im aktuellen Prozess durch das Architekturkonzept sichergestellt.
-    \item Die Idee muss ein Kundenbedürfnis erfüllen. Damit dieses Kriterium bewertet werden kann, muss der Kunde direktes Feedback geben. Dies ist aktuell 
+    \item Die Idee muss ein Kundenbedürfnis erfüllen. Damit dieses Kriterium bewertet werden kann, muss der Kunde direktes Feedback geben. Dies ist 
     mit einigem Aufwand verbunden und wird nur bei großen Entwicklungsthemen ermöglicht.
-    \item Die Idee verursacht keine Regressionen in der Anwendung. Dies ist besonders schwierig abzuschätzen, da die Anwendung sehr komplex ist. Es ist 
+    \item Die Idee beeinflusst keine bestehende Funktionalität negativ. Dies ist besonders schwierig abzuschätzen, da die Anwendung sehr komplex ist. Es ist 
     nicht immer möglich alle Nebenwirkungen einer Entwicklung zu überblicken. Regressionen sollen durch das Testkonzept möglichst vermieden werden, dennoch 
     sind sie nicht vollständig zu vermeiden.
     \item Die Ressourcen zur Umsetzung der Idee müssen vorhanden sein. Dies bezieht sich vorallem auf die Verfügbarkeit von Entwicklern der beteiligten Teams. 
     Durch die Roadmaps der Teams und der Abteilung wird versucht die wichtigsten und größten Entwicklungsthemen zeitlich zu planen. Doch durch die ständige Anpassung  
     der Roadmaps, weißt auch dieses Kriterium einige Schwierigkeiten auf. 
-\end{itemize}
-Mögliche Erfolgskriterien könnten sein: 
-\begin{itemize}
-    \item Je mehr die Umsetzung die Benutzbarkeit der Anwendung verbessert desto besser ist die Idee. Die Anwendung bietet sehr viele Funktionalitäten. Dadurch 
-    wird die Benutzbarkeit für den Kunden immer schwerer. Die Umsetzung sollte für den leicht einzusetzen sein, dazu muss die Funktionalität dokumentiert und klar definiert sein. 
-    Dies erfolgt aktuell durch eine Hilfefunktion innerhalb der Anwendung und eine große Dokumentation der Funktionalitäten in einem Handbuch.
+\end{enumerate}
+\paragraph{Mögliche Erfolgskriterien:}
+\begin{enumerate}
+    \item Je effektiver die Umsetzung die Benutzbarkeit der Anwendung verbessert desto besser ist die Idee. Die Anwendung bietet sehr viele Funktionalitäten. Dadurch 
+    wird die Benutzbarkeit für den Kunden immer komplexer. Die Umsetzung sollte für den Kunden leicht einzusetzen sein, dazu muss die Funktionalität dokumentiert und klar definiert sein. 
     \item Je größer der Nutzen bei wenig Aufwand ist desto besser ist die Idee. Eine Umsetzung die einen hohen Aufwand besitzt, allerdings wenig mehrwert bringt sollte 
-    gemieden werden. Da das Risiko für das Einbauen von Regressionen vermieden werden soll. Der Kundennutzen wird in der User-Story beschrieben. Ist dieser nicht schlüssig, 
+    gemieden werden. Da das Risiko für das versehentliche Einführen von Regressionen vermieden werden muss. Der Kundennutzen wird in der User-Story beschrieben. Ist dieser nicht schlüssig, 
     so wird die Idee im Build-Meeting nicht zur Umsetzung freigegeben. 
     \item Je leichter sich eine Funktionalität in das Produkt einbinden lässt, desto besser ist die Idee. Ist eine Umsetzung leicht einzubinden bedeutet dies 
     weniger Aufwand, leichteres Verständnis für den Kunden und minimiertes Risiko von Regressionen.
-\end{itemize}
+\end{enumerate}
 
-Die Ausarbeitung der Kriterien besitzen noch nicht den Detaillierungsgrad, der für die Anwendung notwendig ist. Hier sollte eine Abschätzung zwischen 
-Aufwand für die Formulierung und der Mehrwert abgeschätzt werden. Da diese Kriterien bereits implizit in den Prozessen vorhanden sind, ist es durchaus 
-möglich, dass die Formulieren keinen sehr großen Mehrwert bringt. Sie würde allerdings das Verständnis der Entwickler über Bewertungsentscheidungen stark 
+Die hier beschriebenen Kriterien besitzen noch nicht den Detaillierungsgrad, um praktisch in der Entwicklung eingesetzt zu werden.
+Da diese Kriterien bereits implizit in den Prozessen vorhanden sind, ist es durchaus 
+möglich, dass die Formulierung keinen sehr großen Mehrwert bringt. Es würde allerdings das Verständnis der Entwickler über Bewertungsentscheidungen stark 
 verbessern. 
